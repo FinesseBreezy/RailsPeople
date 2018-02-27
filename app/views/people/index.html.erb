@@ -1,0 +1,11 @@
+<h1>List of Registered Persons</h1>
+
+<% @people.each do |p| %>
+<p></p>
+PERSON <%= p.name %>
+<%= link_to 'information', person_path(p) %>
+<%= link_to 'edit', edit_person_path(p)%>
+<%= link_to 'delete', p, :method => :delete %>
+<p></p>
+
+<% end %>
